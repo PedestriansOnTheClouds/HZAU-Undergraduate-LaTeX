@@ -16,7 +16,7 @@
 \documentclass[a4paper,\SideMode,UTF8]{article} %A4纸，UTF-8
 
 \input{packages_and_settings.tex} %加载各宏包以及本模板的主要设置
-\addbibresource{./reference/thesis-ref.bib} %加载bib文件（参考文献）
+\bibliography{references} %加载参考文献，references是bib文件的名称（不包含扩展名）
 
 \begin{document}
 
@@ -25,19 +25,27 @@
 \input{./preface/inner-cover.tex} %插入内封面
 \ClearPageStyle
 
+\input{./preface/title-page.tex} %插入扉页
+\newpage
+\input{./preface/Declaration.tex} %插入原创性声明
+\newpage
+
 \restoregeometry
 %生成目录
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 \begin{spacing}{1}
     \tableofcontents
 \end{spacing}
-\ClearPageStyle
+\newpage
 \pagenumbering{Roman}
 \input{./preface/abstract-CHS.tex} %生成中英文摘要及关键词
-\ClearPageStyle
+\newpage
 
 \input{./preface/abstract-ENG.tex} %生成中英文摘要及关键词
-\ClearPageStyle
+\newpage
+\input{./preface/Abbreviation.tex} %插入缩略语表，如不需要，可以注释掉
+\newpage
+
 \pagenumbering{arabic}
 \pagestyle{fancy} %开始使用页眉页脚
 \setcounter{page}{1} %论文页码从正文开始记数
@@ -49,23 +57,26 @@
 \input{./body/SectionE.tex} %正文第五章
 
 \theendnotes %尾注（若没有尾注请将本行删除）
-\ClearPageStyle
+\newpage
 
 %生成参考文献
 \phantomsection
 \addcontentsline{toc}{section}{参考文献}
-\printbibliography[title={\centerline{\bfseries\sffamily \zihao {-3}参考文献}}]
-\ClearPageStyle
+\printbibliography[title={\centerline{\bfseries\sffamily \zihao {-3}参考文献}}] % 
+\newpage
+
+%\bibliography{plain}
 
 %生成附录
 \phantomsection
 \addtocontents{toc}{\setcounter{tocdepth}{1}}
 \addcontentsline{toc}{section}{附录}
 \setcounter{subsection}{0}
-\ctexset { subsection = { name={,},number={\arabic{subsection}},format={\rmfamily \zihao {5}} } }
-\ctexset { subparagraph = { name={(,)},number={\arabic{subparagraph}},format={\rmfamily \zihao {5}},indent=2em } }
+\ctexset { subsection = { name={,},number={\arabic{subsection}},format={\heiti \zihao {5}} } }
+\ctexset { subparagraph = { name={(,)},number={\arabic{subparagraph}},format={\heiti \zihao {5}},indent=2em } }
+% 这里设置了小节（subsection）标题的字样
 \input{./ending/Appendix.tex}
-\ClearPageStyle
+\newpage
 
 \makeacknowledgement %生成感谢
 

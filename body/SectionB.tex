@@ -1,47 +1,89 @@
-\section{定理等环境测试}这节用来展示定理，引理等常用论文环境。
+\section{材料与方法}这节用来讨论研究XX过程中用到的的材料与方法（\textbf{在本模板中，该节以动量定理的推导与动量守恒定律为例，展示定理，引理等常用论文环境。}）
  
 \subsection{编号环境与不编号环境}
+这一小节我们展示带编号的动量定理推导过程。
+\subsubsection{定理带编号的环境}
 
-\subsubsection{编号环境}
+我们在研究XX问题时，往往需要用到动量定理，在推导动量定理时，我们首先要用到牛顿第二运动定律作为引理：
+\begin{lemma}[牛顿第二运动定律]\label{lem2_1} 
 
-\begin{theorem}\label{thm2_1}
-
-    设$A,B$是两个实数, 则$2AB\leq 2 A^2+B^2$.
+    物体加速度的大小跟作用力成正比，跟物体的质量成反比，且与物体质量的倒数成正比；加速度的方向跟作用力的方向相同.使用公式表示即为：
+    $$ \vec{F}\propto m\vec{a} $$
+    通常我们将比例系数设为1，即为：
+    $$\vec{F}= m\vec{a}$$
     
+\end{lemma}
+
+由牛顿第二定律，我们可以推导出动量定理如下：
+\begin{theorem}[动量定理]\label{thm2_2}
+    假设$\vec{p}$为物体的动量，$\vec{F}$为作用在物体上的力的矢量和,则有：
+    $$\vec{F}=\frac{d\vec{p}}{dt}$$
 \end{theorem}
 
 \begin{proof}
-    这里是证明。
+	由牛顿第二定律可得：$$ \vec{a}=\frac{\vec{F}}{m}$$
+	由$\vec{a}=\frac{d\vec{v}}{dt}$可得：
+	$$\frac{d\vec{v}}{dt}=\frac{\vec{F}}{m}$$
+	移项，可得：
+	$$\vec{F}=\frac{md\vec{v}}{dt}$$
+	即为：
+	$$\vec{F}=\frac{d\vec{p}}{dt}$$
 \end{proof}
 
-\begin{lemma}[Nakayama引理]\label{lem2_2}
-    这是一条引理测试。。。
-\end{lemma}
-
-\begin{problem}[连续统假设]是否存在$\mathbb{R}$的子集S使得$card(\mathbb{N})<card(S)<card(\mathbb{R})$?
+由此我们提出以下命题：
+\begin{problem}[动量是否守恒]
+	一个系统不受外力或所受外力之和为零的情况下，这个系统的总动量是否保持不变?
 \end{problem}
+
 \begin{solution}
-    不存在。
+    保持不变，可设计实验验证如下：······
 \end{solution}
 
-\subsubsection{无编号环境}
+\begin{example}[完全弹性碰撞]
+	例如，在完全弹性碰撞的情形下，两小球同时满足动量守恒与动能守恒：
+	 $$\mathrm{m}_{1} v_{1}+\mathrm{m}_{2} v_{2}=\mathrm{m}_{1} v_{1}^{\prime}+\mathrm{m}_{2} v_{2}^{\prime}; $$
+	$$\frac{1}{2} m_{1} v_{1}^{2}+\frac{1}{2} m_{2} v_{2}^{2}=\frac{1}{2} m_{1} v_{1}^{\prime 2}+\frac{1}{2} m_{2} v_{2}^{\prime 2} ;$$
+\end{example}
 
-\begin{theorem*}
+\subsubsection{定理无编号的环境} %若需要引理，定理等无编号，在begin后的环境中添加“ * ”即可
 
-    设$A,B$是两个实数, 则$2AB\leq 2 A^2+B^2$.
-    
+我们在研究XX问题时，往往需要用到动量定理，在推导动量定理时，我们首先要用到牛顿第二运动定律作为引理：
+\begin{lemma*}[牛顿第二运动定律] 
+	
+	物体加速度的大小跟作用力成正比，跟物体的质量成反比，且与物体质量的倒数成正比；加速度的方向跟作用力的方向相同.使用公式表示即为：
+	$$ \vec{F}\propto m\vec{a} $$
+	通常我们将比例系数设为1，即为：
+	$$\vec{F}= m\vec{a}$$
+	
+\end{lemma*}
+
+由牛顿第二定律，我们可以推导出动量定理如下：
+\begin{theorem*}[动量定理]
+	假设$\vec{p}$为物体的动量，$\vec{F}$为作用在物体上的力的矢量和,则有：
+	$$\vec{F}=\frac{d\vec{p}}{dt}$$
 \end{theorem*}
 
 \begin{proof}
-    这里是证明。
+	由牛顿第二定律可得：$$ \vec{a}=\frac{\vec{F}}{m}$$
+	由$\vec{a}=\frac{d\vec{v}}{dt}$可得：
+	$$\frac{d\vec{v}}{dt}=\frac{\vec{F}}{m}$$
+	移项，可得：
+	$$\vec{F}=\frac{md\vec{v}}{dt}$$
+	即为：
+	$$\vec{F}=\frac{d\vec{p}}{dt}$$
 \end{proof}
 
-\begin{lemma*}[Nakayama引理]
-    这是一条引理测试。。。
-\end{lemma*}
-
-\begin{problem*}[连续统假设]是否存在$\mathbb{R}$的子集S使得$card(\mathbb{N})<card(S)<card(\mathbb{R})$?
+由此我们提出以下命题：
+\begin{problem*}[动量是否守恒]
+	一个系统不受外力或所受外力之和为零的情况下，这个系统的总动量是否保持不变?
 \end{problem*}
+
 \begin{solution}
-    不存在。
+	保持不变，可设计实验验证如下：······
 \end{solution}
+
+\begin{example*}[完全弹性碰撞]
+	例如，在完全弹性碰撞的情形下，两小球同时满足动量守恒与动能守恒：
+	$$\mathrm{m}_{1} v_{1}+\mathrm{m}_{2} v_{2}=\mathrm{m}_{1} v_{1}^{\prime}+\mathrm{m}_{2} v_{2}^{\prime}; $$
+	$$\frac{1}{2} m_{1} v_{1}^{2}+\frac{1}{2} m_{2} v_{2}^{2}=\frac{1}{2} m_{1} v_{1}^{\prime 2}+\frac{1}{2} m_{2} v_{2}^{\prime 2} ;$$
+\end{example*}

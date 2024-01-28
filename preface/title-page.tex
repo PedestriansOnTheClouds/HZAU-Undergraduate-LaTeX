@@ -1,0 +1,56 @@
+
+%请尽量不要改动此页代码
+
+\thispagestyle{empty}
+\begin{titlepage}
+	\captionsetup{belowskip=0pt}
+	\input{paper_info.tex}
+	\renewcommand{\ULthickness}{1.2pt}
+	\begin{center}\noindent \bfseries \zihao{5}{\rmfamily{分类号\hfill 密级}}\end{center}
+	
+	\begin{textblock}{146.4}(31.8,12)
+		\setstretch{2.0}
+		\noindent
+		\begin{minipage}[t][8.2cm][c]{\linewidth}
+			\begin{center}
+				\noindent{\zihao{2}{华中农业大学学士学位论文}}
+			\end{center}
+		\end{minipage}
+	\end{textblock}
+	
+	\renewcommand{\ULthickness}{0.4pt}
+	
+	\begin{textblock}{146.4}(31.8,55) % 起始位置（左上角）
+		\setstretch{2.0}
+		\noindent
+		\begin{minipage}[t][8.2cm][c]{\linewidth}
+			\begin{center}
+				\noindent\textbf{\zihao{4}{\rmfamily{\expandafter\expandafter{\ThesisTitleCHS}}}}
+			\end{center}
+			\begin{center}
+				\noindent\textbf{\zihao{4}{\rmfamily{\expandafter\expandafter{\ThesisTitleENG}}}}
+			\end{center}
+		\end{minipage}
+	\end{textblock}
+	
+	\begin{textblock}{146.4}(31.8,145)
+		\begin{center}
+			\renewcommand{\arraystretch}{0.9}
+			\bfseries\zihao{3}\rmfamily
+			\begin{tabular}{ l r }
+				姓\hfill 名：            & \makebox[6cm][l]{\Author}        \\
+				学\hfill 号：            & \makebox[6cm][l]{\StudentID}     \\		
+				专 \, 业 \, 班 \, 级：            & \makebox[6cm][l]{\Major\Class}        \\
+				学\hfill 位\hfill 类\hfill 型：            & \makebox[6cm][l]{\DegreeType}        \\
+				指\hfill 导\hfill 教\hfill 师：            & \makebox[6cm][l]{\Supervisor\quad \AcademicTitle }    \\		
+			\end{tabular}\\
+			\vspace{4em}
+			\zihao{3}{\heiti{中国·武汉}} \\
+			\nointerlineskip
+			\vspace{10pt}
+			
+			\zihao{3}{\CompleteYear}\hspace*{1em}\textbf{\heiti{年}}\hspace*{1em}\zihao{3}{\CompleteMonth}\hspace*{1em}\textbf{\heiti{月}} \\
+		\end{center}
+	\end{textblock}
+	
+\end{titlepage}

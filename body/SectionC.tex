@@ -1,10 +1,11 @@
-\section{公式测试}这节用来展示公式，交换图等。
+\section{结果与分析}这节用来论述实验结果，并进行相关分析（\textbf{本模板中，这节用来展示如何插入公式，交换图等，便捷的公式编辑是LaTeX相较于word的一大特色。}）。
  
 \subsection{行内公式}
-典范的同态$\lim_{\leftarrow F} W_r(S)\rightarrow \lim_{\leftarrow F} W_r(S/\pi S )$是同构。
+典范的同态$\lim_{\leftarrow F} W_r(S)\rightarrow \lim_{\leftarrow F} W_r(S/\pi S )$是同构。%行内公式用两个单$括起来
 
 \subsection{整行公式}
-$$\mathbb{A}_{inf}=W(S^\flat)\cong \lim_{\leftarrow F} W_r(S)$$
+整行公式如下：
+$$\mathbb{A}_{inf}=W(S^\flat)\cong \lim_{\leftarrow F} W_r(S)$$ %整行公式用双$括起来
 
 \subsection{多行公式}
 \begin{sloppypar}
@@ -14,10 +15,9 @@ $$\mathbb{A}_{inf}=W(S^\flat)\cong \lim_{\leftarrow F} W_r(S)$$
 
 
 \subsubsection{align环境}
+此处用于演示align环境：
 \begin{align*}
     \operatorname{E} (Z_{n+1} - Z_n | X_1,..., X_n)
-    &= \operatorname{E} (S_{n+1}^2 - (n+1) \sigma^2 - S_n^2 + n \sigma^2 | X_1,..., X_n) \\
-    &= \operatorname{E} (S_{n+1}^2 - S_n^2 - (n+1) \sigma^2 + n \sigma^2 | X_1,..., X_n) \\
     &= \operatorname{E} (X_{n+1}(X_{n+1} + 2\sum_{i=1}^n X_i) - \sigma^2 | X_1,..., X_n) \\
     &= \operatorname{E} (X_{n+1}X_{n+1})
        + 2\operatorname{E} (X_{n+1}) \sum_{i=1}^n X_i - \sigma^2 \\
@@ -25,6 +25,7 @@ $$\mathbb{A}_{inf}=W(S^\flat)\cong \lim_{\leftarrow F} W_r(S)$$
 \end{align*}
 
 \subsubsection{split环境（内嵌）}
+此处用于演示spilt环境：
 \begin{equation*}
     \begin{split}
     (a + b)^4

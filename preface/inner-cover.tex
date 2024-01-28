@@ -1,48 +1,71 @@
 
-%请不要修改本页的任何代码！
-%请不要修改本页的任何代码！
-%请不要修改本页的任何代码！
+%请尽量不要改动此页代码
+
 \thispagestyle{empty}
 \begin{titlepage}
 	\captionsetup{belowskip=0pt}
 	\input{paper_info.tex}
 	\renewcommand{\ULthickness}{1.2pt}
-	\begin{center}\noindent \bfseries \zihao{4}{\rmfamily{\CompleteYear 届本科生学士学位论文\hfill 学校代码：\uline{10269}}}\end{center}
+	\begin{center}\noindent \bfseries \zihao{4}{\rmfamily{分类号\hfill 密级}}\end{center}
 
-	\begin{textblock}{146.4}(31.8,31)
+	\begin{textblock}{146.4}(28.8,31)
 		\centering
-		\includegraphics{./figures/inner-cover(contains_font).eps}
+		\includegraphics{./figures/hzau.png} %设置封面学校标签
 	\end{textblock}
 
-	\begin{textblock}{146.4}(31.8,125)
+	\begin{textblock}{146.4}(31.8,46)
 		\setstretch{2.0}
 		\noindent
 		\begin{minipage}[t][8.2cm][c]{\linewidth}
 			\begin{center}
-				\noindent\textbf{\zihao{1}{\rmfamily{\expandafter\uline\expandafter{\TitleCHS}}}}
+				\noindent\textbf{\zihao{1}{\rmfamily{\expandafter\expandafter{\TitleCHS}}}}
 			\end{center}
 			\begin{center}
-				\noindent\textbf{\zihao{1}{\rmfamily{\expandafter\uline\expandafter{\TitleENG}}}}
+				\noindent\textbf{\zihao{1}{\rmfamily{\expandafter\expandafter{\TitleENG}}}}
 			\end{center}
 		\end{minipage}
 	\end{textblock}
 
 	\renewcommand{\ULthickness}{0.4pt}
+	
+	\begin{textblock}{146.4}(31.8,95) % 起始位置（左上角）
+		\setstretch{2.0}
+		\noindent
+		\begin{minipage}[t][8.2cm][c]{\linewidth}
+			\begin{center}
+				\noindent\textbf{\zihao{1}{\rmfamily{\expandafter\expandafter{\ThesisTitleCHS}}}}
+			\end{center}
+			\begin{center}
+				\noindent\textbf{\zihao{1}{\rmfamily{\expandafter\expandafter{\ThesisTitleENG}}}}
+			\end{center}
+		\end{minipage}
+	\end{textblock}
 
-	\begin{textblock}{146.4}(31.8,208)
+	\begin{textblock}{146.4}(31.8,165)
 		\begin{center}
 			\renewcommand{\arraystretch}{0.9}
-			\bfseries\zihao{4}\rmfamily
+			\bfseries\zihao{3}\rmfamily
 			\begin{tabular}{ l r }
-				姓\hfill 名：                   & \underline{{\makebox[6cm][c]{\Author}}}        \\
-				学\hfill 号：                   & \underline{{\makebox[6cm][c]{\StudentID}}}     \\
-				学\hfill 院：                   & \underline{{\makebox[6cm][c]{\Department}}}    \\
-				专\hfill 业：                   & \underline{{\makebox[6cm][c]{\Major}}}         \\
-				指\hfill 导\hfill 教\hfill 师： & \underline{{\makebox[6cm][c]{\Supervisor}}}    \\
-				职\hfill 称：                   & \underline{{\makebox[6cm][c]{\AcademicTitle}}} \\
+				姓\hspace{23pt} 名：            & \makebox[9cm][l]{\Author}        \\
+				NAME:                          & \underline{{\makebox[9cm][l]{\AuthorENG}}}        \\
+				学\hspace{23pt} 号：            & \makebox[9cm][l]{\StudentID}     \\
+				STUDENT NO.:                   &  \underline{{\makebox[9cm][l]{\StudentID}}}     \\			
+				专\hspace{23pt} 业：            & \makebox[9cm][l]{\Major}        \\
+				MAJOR:                         & \underline{{\makebox[9cm][l]{\MajorENG}}} \\
+				导\hspace{23pt} 师：            & \makebox[9cm][l]{\Supervisor\quad \AcademicTitle }    \\
+				SUPERVISOR:                     &  \underline{{\makebox[9cm][l]{\AcademicTitleENG\, \SupervisorENG}}}    \\		
 			\end{tabular}\\
 			\vspace{1em}
-			\CompleteYear\hspace*{1em}年\hspace*{1em}\CompleteMonth\hspace*{1em}月
+			\location \\
+			\nointerlineskip
+			\vspace{10pt}
+			\locationENG \\
+			\nointerlineskip
+			\vspace{15pt}
+			\CompleteYear\hspace*{1em}\textbf{\heiti{年}}\hspace*{1em}\CompleteMonth\hspace*{1em}\textbf{\heiti{月}} \\
+			\nointerlineskip
+			\vspace{10pt}
+			\CompleteMonthENG,\, \CompleteYearENG
 		\end{center}
 	\end{textblock}
 	

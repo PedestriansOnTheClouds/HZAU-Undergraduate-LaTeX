@@ -10,8 +10,18 @@
 \usepackage{float} %图片与表格的更好排版
 \usepackage{ulem} %更好的下划线
 \usepackage[top=2.5cm, bottom=2.0cm, left=3.0cm, right=2.0cm]{geometry} %设置页边距
-
 \usepackage{fontspec} %设置字体需要的宏包
+\usepackage{booktabs} % 用于三线表
+\usepackage{algorithm} % 用于伪代码环境
+\usepackage{algpseudocode} % 伪代码样式
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{array}
+
+
 
 %设置西文字体为Times New Roman，如果没有则以开源近似字体代替
 \IfFontExistsTF{Times New Roman}{
@@ -60,6 +70,19 @@
 	\linespread{1.621} %1.5倍行距
 }
 
+\lstset{
+	basicstyle=\ttfamily,
+	columns=fullflexible,
+	breaklines=true,
+	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+	language=Python,
+	frame=single,
+	showstringspaces=false,
+	commentstyle=\color{gray},
+	keywordstyle=\color{blue},
+	stringstyle=\color{orange}
+}
+
 \showboxdepth=5
 \showboxbreadth=5
 
@@ -77,9 +100,12 @@
 
 %设置页眉页脚
 \usepackage{fancyhdr}
-\lhead{华东师范大学学士学位论文}
-\chead{}
-\rhead{\TitleCHS}
+\lhead{}
+% 奇数页居中页眉
+\fancyhead[OC]{一对一无人机空战的博弈模型与算法研究（标题示例）}  % 论文标题，此处需要自行修改
+% 偶数页居中页眉
+\fancyhead[EC]{华中农业大学2024届学士学位（毕业）论文}
+\rhead{}
 \lfoot{}
 \cfoot{\thepage}
 \rfoot{}
