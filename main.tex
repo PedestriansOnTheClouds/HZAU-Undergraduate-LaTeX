@@ -23,6 +23,7 @@
 \pagestyle{empty} %不对正文前的各页面使用页眉页脚
 \newgeometry{top=2.0cm, bottom=2.0cm,left=3.18cm, right=3.18cm} %设置用于首页的页边距
 \input{./preface/inner-cover.tex} %插入内封面
+\nopagecolor % 清除页面背景色
 \ClearPageStyle
 
 \input{./preface/title-page.tex} %插入扉页
@@ -32,12 +33,13 @@
 
 \restoregeometry
 %生成目录
+\pagenumbering{Roman}
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 \begin{spacing}{1}
     \tableofcontents
 \end{spacing}
 \newpage
-\pagenumbering{Roman}
+\pagenumbering{roman} %生成罗马数字页码
 \input{./preface/abstract-CHS.tex} %生成中英文摘要及关键词
 \newpage
 
@@ -46,10 +48,11 @@
 \input{./preface/Abbreviation.tex} %插入缩略语表，如不需要，可以注释掉
 \newpage
 
-\pagenumbering{arabic}
+\pagenumbering{arabic} %生成阿拉伯数字页码
 \pagestyle{fancy} %开始使用页眉页脚
 \setcounter{page}{1} %论文页码从正文开始记数
 
+\doublespacing %这里存在一个还不太清楚原因的bug，正文部分的行距默认为1倍，使用\onehalfspacing命令生成的行距也只有1倍，只有使用\doublespacing命令生成的行距才是正常的1.5倍，希望发现问题在哪里的大佬不吝赐教。
 \input{./body/SectionA.tex} %正文第一章
 \input{./body/SectionB.tex} %正文第二章
 \input{./body/SectionC.tex} %正文第三章

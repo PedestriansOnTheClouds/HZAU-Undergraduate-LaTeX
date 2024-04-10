@@ -72,18 +72,7 @@
 
 我是使用**Texstudio**进行编写（原作者推荐使用VSCode+latexworkshop插件进行论文编写，笔者还未尝试）。main.tex中已经为其写好了Magic Macro（也就是开头三行），使用时仅需Ctrl+S即可，十分方便。
 
-本模板在texlive 2018环境中编译通过，别的环境请自行测试。一般情况下不支持（也从不准备支持）CTex套装。
-
-本模板使用了biblatex来进行文献管理，且使用了biber作为后端。如果需要完整编译一次，你需要依次进行以下操作：
-
-```
-xelatex main.tex
-biber main.bcf
-xelatex main.tex
-xelatex main.tex
-```
-
-是的没错，xelatex指令一共要执行三次。最后的产物就是`main.pdf`。
+本模板在texlive 2022环境中编译通过，别的环境请自行测试。一般情况下不支持（也从不准备支持）CTex套装。
 
 ### 打印模式（新！）
 

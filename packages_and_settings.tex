@@ -9,11 +9,14 @@
 \usepackage{caption} %实现图片的多行说明
 \usepackage{float} %图片与表格的更好排版
 \usepackage{ulem} %更好的下划线
-\usepackage[top=2.5cm, bottom=2.0cm, left=3.0cm, right=2.0cm]{geometry} %设置页边距
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm, headheight=2.0cm, footskip=1.5cm]{geometry} %设置页边距
 \usepackage{fontspec} %设置字体需要的宏包
 \usepackage{booktabs} % 用于三线表
 \usepackage{algorithm} % 用于伪代码环境
 \usepackage{algpseudocode} % 伪代码样式
+\usepackage{xcolor} % 引入xcolor包
+\usepackage{pgfplots} % 引入pgfplots包
+\pgfplotsset{compat=1.17} % 设置pgfplots的兼容性版本
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{multirow}
@@ -25,14 +28,14 @@
 
 %设置西文字体为Times New Roman，如果没有则以开源近似字体代替
 \IfFontExistsTF{Times New Roman}{
-	\setmainfont{Times New Roman}
+	\setmainfont{Times New Roman} %[SizeFeatures={Size=12}] % 将字体设置为Times New Roman，大小为12pt
 }{
 	\usepackage{newtxtext,newtxmath}
 }
 
 %设置文档中文字体。优先次序：中易 > Adobe > 华文(Mac) > Fandol
 \IfFontExistsTF{SimSun}{
-	\setCJKmainfont[AutoFakeBold=2,ItalicFont=KaiTi]{SimSun}
+	\setCJKmainfont[AutoFakeBold=2,ItalicFont=KaiTi]{SimSun} %,SizeFeatures={Size=12}
 }{
 	\IfFontExistsTF{AdobeSongStd-Light}{
 		\setCJKmainfont[AutoFakeBold=2,ItalicFont=AdobeKaitiStd-Regular]{AdobeSongStd-Light}
@@ -68,19 +71,6 @@
 	]{zhlineskip}
 }{
 	\linespread{1.621} %1.5倍行距
-}
-
-\lstset{
-	basicstyle=\ttfamily,
-	columns=fullflexible,
-	breaklines=true,
-	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
-	language=Python,
-	frame=single,
-	showstringspaces=false,
-	commentstyle=\color{gray},
-	keywordstyle=\color{blue},
-	stringstyle=\color{orange}
 }
 
 \showboxdepth=5
@@ -132,44 +122,44 @@
 \theorembodyfont{\upshape}
 \theoremseparator{:}
 \theoremsymbol{\ensuremath{\square}}
-\newtheorem{proof}{\bfseries \sffamily 证明}
+\newtheorem{proof}{\bfseries \sffamily \zihao{-4} 证明}
 \theoremsymbol{\ensuremath{\blacksquare}}
-\newtheorem{solution}{\bfseries \sffamily 解}
+\newtheorem{solution}{\bfseries \sffamily \zihao{-4} 解}
 
 %定义各种常用环境
 \theoremstyle{plain}
 \theoremseparator{.}
 \theorembodyfont{\upshape}
 \theoremsymbol{}
-\newtheorem{theorem}{\bfseries \sffamily 定理}[section]
-\renewtheorem*{theorem*}{\bfseries \sffamily 定理}
-\newtheorem{lemma}[theorem]{\bfseries \sffamily 引理}
-\renewtheorem*{lemma*}{\bfseries \sffamily 引理}
-\newtheorem{corollary}[theorem]{\bfseries \sffamily 推论}
-\renewtheorem*{corollary*}{\bfseries \sffamily 推论}
-\newtheorem{definition}[theorem]{\bfseries \sffamily 定义}
-\renewtheorem*{definition*}{\bfseries \sffamily 定义}
-\newtheorem{conjecture}[theorem]{\bfseries \sffamily 猜想}
-\renewtheorem*{conjecture*}{\bfseries \sffamily 猜想}
-\newtheorem{problem}[theorem]{\bfseries \sffamily 问题}
-\renewtheorem*{problem*}{\bfseries \sffamily 问题}
-\newtheorem{proposition}[theorem]{\bfseries \sffamily 命题}
-\renewtheorem*{proposition*}{\bfseries \sffamily 命题}
-\newtheorem{remark}[theorem]{\bfseries \sffamily 注记}
-\renewtheorem*{remark*}{\bfseries \sffamily 注记}
-\newtheorem{example}[theorem]{\bfseries \sffamily 例}
-\renewtheorem*{example*}{\bfseries \sffamily 例}
+\newtheorem{theorem}{\bfseries \sffamily \zihao{-4} 定理}[section]
+\renewtheorem*{theorem*}{\bfseries \sffamily \zihao{-4} 定理}
+\newtheorem{lemma}[theorem]{\bfseries \sffamily \zihao{-4} 引理}
+\renewtheorem*{lemma*}{\bfseries \sffamily \zihao{-4} 引理}
+\newtheorem{corollary}[theorem]{\bfseries \sffamily \zihao{-4} 推论}
+\renewtheorem*{corollary*}{\bfseries \sffamily \zihao{-4} 推论}
+\newtheorem{definition}[theorem]{\bfseries \sffamily \zihao{-4} 定义}
+\renewtheorem*{definition*}{\bfseries \sffamily \zihao{-4} 定义}
+\newtheorem{conjecture}[theorem]{\bfseries \sffamily \zihao{-4} 猜想}
+\renewtheorem*{conjecture*}{\bfseries \sffamily \zihao{-4} 猜想}
+\newtheorem{problem}[theorem]{\bfseries \sffamily \zihao{-4} 问题}
+\renewtheorem*{problem*}{\bfseries \sffamily \zihao{-4} 问题}
+\newtheorem{proposition}[theorem]{\bfseries \sffamily \zihao{-4} 命题}
+\renewtheorem*{proposition*}{\bfseries \sffamily \zihao{-4} 命题}
+\newtheorem{remark}[theorem]{\bfseries \sffamily \zihao{-4} 注记}
+\renewtheorem*{remark*}{\bfseries \sffamily \zihao{-4} 注记}
+\newtheorem{example}[theorem]{\bfseries \sffamily \zihao{-4} 例}
+\renewtheorem*{example*}{\bfseries \sffamily \zihao{-4} 例}
 
 %设置各种常用环境的交叉引用格式
-\crefformat{theorem}{#2\bfseries{\sffamily 定理} #1#3}
-\crefformat{lemma}{#2\bfseries{\sffamily 引理} #1#3}
-\crefformat{corollary}{#2\bfseries{\sffamily 推论} #1#3}
-\crefformat{definition}{#2\bfseries{\sffamily 定义} #1#3}
-\crefformat{conjecture}{#2\bfseries{\sffamily 猜想} #1#3}
-\crefformat{problem}{#2\bfseries{\sffamily 问题} #1#3}
-\crefformat{proposition}{#2\bfseries{\sffamily 命题} #1#3}
-\crefformat{remark}{#2\bfseries{\sffamily 注记} #1#3}
-\crefformat{example}{#2\bfseries{\sffamily 例} #1#3}
+\crefformat{theorem}{#2\bfseries{\sffamily \zihao{-4} 定理} #1#3}
+\crefformat{lemma}{#2\bfseries{\sffamily \zihao{-4} 引理} #1#3}
+\crefformat{corollary}{#2\bfseries{\sffamily \zihao{-4} 推论} #1#3}
+\crefformat{definition}{#2\bfseries{\sffamily \zihao{-4} 定义} #1#3}
+\crefformat{conjecture}{#2\bfseries{\sffamily \zihao{-4} 猜想} #1#3}
+\crefformat{problem}{#2\bfseries{\sffamily \zihao{-4} 问题} #1#3}
+\crefformat{proposition}{#2\bfseries{\sffamily \zihao{-4} 命题} #1#3}
+\crefformat{remark}{#2\bfseries{\sffamily \zihao{-4} 注记} #1#3}
+\crefformat{example}{#2\bfseries{\sffamily \zihao{-4} 例} #1#3}
 
 %允许公式跨页显示
 \allowdisplaybreaks
@@ -195,6 +185,19 @@
 \renewcommand{\algorithmicrequire}{\textbf{输入:}}
 \renewcommand{\algorithmicensure}{\textbf{输出:}}
 
+\lstset{
+	basicstyle=\ttfamily,
+	columns=fullflexible,
+	breaklines=true,
+	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+	language=Python,
+	frame=single,
+	showstringspaces=false,
+	commentstyle=\color{gray},
+	keywordstyle=\color{blue},
+	stringstyle=\color{orange}
+}
+
 %可能会需要在用自然语言描述算法步骤时使用的宏包
 \usepackage{enumitem}
 
@@ -204,6 +207,11 @@
 %设置图、表的编号格式
 \renewcommand{\thefigure}{\arabic{section}-\arabic{figure}}
 \renewcommand{\thetable}{\arabic{section}-\arabic{table}}
+
+% 设置图表和表格标题的字体大小为\small（大约对应于LaTeX中的5号字体）
+\captionsetup{
+	font=small,
+}
 %%每个section开始重置图、表的计数器
 \makeatletter
 \@addtoreset{table}{section}
